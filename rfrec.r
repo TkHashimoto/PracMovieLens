@@ -26,6 +26,5 @@ rfrec.pred <- function(tu=tu,ti=tm,u,i){
 	for(r in 1:5){
 		tmp[r] <- (freqUser(tu,u,r) + 1 + indicator.avg_user(tu,u,r)) * (freqItem(ti,i,r) + 1 + indicator.avg_item(ti,i,r))
 	}
-	print(tmp)
-	return(max(tmp))
+	return(which.max(tmp))
 }
